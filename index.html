@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>el baile del trolleo</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            display: grid;
+            min-height: 100vh;
+        }
+        img {
+            display: none;
+            place-self: center;
+            width: 100%;
+        }
+        button {
+            display: grid;
+            place-self: center;
+            padding: 10px;
+            background-color: #4285f4;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="playButton" onclick="playAudio()">Press to Start</button>
+    <img id="danceImage" src="./elbailedeltrolleo.gif"/>
+    <audio id="myAudio" loop onplay="handleAudioPlay()">
+        <source src="elbailedeltrolleo.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
+
+        function handleAudioPlay() {
+            var playButton = document.getElementById("playButton");
+            var danceImage = document.getElementById("danceImage");
+
+            // Hide the button and show the image
+            playButton.style.display = "none";
+            danceImage.style.display = "grid";
+        }
+    </script>
+</body>
+</html>
