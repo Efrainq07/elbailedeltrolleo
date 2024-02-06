@@ -32,7 +32,7 @@
 <body>
     <button id="playButton" onclick="playAudio()">Press to Start</button>
     <img id="danceImage" src="./elbailedeltrolleo.gif"/>
-    <audio id="myAudio" loop onplay="handleAudioPlay()">
+    <audio id="myAudio" onended="this.play();" onplay="handleAudioPlay()">
         <source src="elbailedeltrolleo.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
